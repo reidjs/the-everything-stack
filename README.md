@@ -1,5 +1,23 @@
+# Development
+1. cd into react-next
+2. docker build -t reidjs/next-web-app .
+3. docker run -p 49161:3000 -d reidjs/next-web-app
+
+4. cd into vue-vuex
+*note: had to remove fsevents to get this working*
+5. docker build -t reidjs/vue-vuex .
+6. docker run -p 49162:3001 -d reidjs/vue-vuex
+
+TODO: write a docker-compose file to run the dockerifles simultaneously from parent directory. Also run on same port or within same container?
+
 # The Everything Stack
 The Everything Stack is a rube-goldberg-esque static website that runs on as many modern technologies as possible. In the spirit of https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition the goal is to perform _simple tasks_ in the most convoluted method possible. 
+
+1. React w/ Next
+https://github.com/react-next-boilerplate/react-next-boilerplate
+
+2. Vue w/ Vuex
+https://github.com/chrisvfritz/vue-enterprise-boilerplate
 
 # Ideas
 *Yes:* 
