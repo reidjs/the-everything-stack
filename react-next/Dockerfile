@@ -1,9 +1,8 @@
 FROM node:10
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm i -g serve
 RUN npm run build
 EXPOSE 3000 
-CMD [ "serve", "-p", "3000", "-s", "public" ]
+CMD [ "node", "server/app.js" ]
