@@ -11,7 +11,7 @@
 TODO: write a docker-compose file to run the dockerifles simultaneously from parent directory. Also run on same port or within same container?
 
 # The Everything Stack
-The Everything Stack is a rube-goldberg-esque static website that runs on as many modern technologies as possible. In the spirit of https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition the goal is to perform _simple tasks_ in the most convoluted method possible. 
+The Everything Stack is a rube-goldberg-esque static website that runs on as many modern technologies as possible.\ In the spirit of https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition the goal is to perform _simple tasks_ in the most convoluted method possible. This is an art project and not intended for serious production uses. 
 
 1. React w/ Next
 https://github.com/react-next-boilerplate/react-next-boilerplate
