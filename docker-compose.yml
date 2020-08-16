@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+    react:
+        build: ./react-next
+        hostname: react
+        ports: 
+            - 3000:3000
+
+    vue:
+        build: ./vue-vuex
+        hostname: vue
+        ports: 
+            - 3001:3001

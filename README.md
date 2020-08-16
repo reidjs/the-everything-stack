@@ -1,17 +1,20 @@
 # Development
-1. cd into react-next
-2. docker build -t reidjs/next-web-app .
-3. docker run -p 49161:3000 -d reidjs/next-web-app
+### Running from docker-compose in parent dir
+`docker-compose up -d`
 
-4. cd into vue-vuex
-*note: had to remove fsevents to get this working*
-5. docker build -t reidjs/vue-vuex .
-6. docker run -p 49162:3001 -d reidjs/vue-vuex
+### Running individual Dockerfiles
+cd into react-next  
+`docker build -t reidjs/next-web-app .`  
+`docker run -p 49161:3000 -d reidjs/next-web-app`  
 
-TODO: write a docker-compose file to run the dockerifles simultaneously from parent directory. Also run on same port or within same container?
+cd into vue-vuex  
+*note: had to remove fsevents to get this working*  
+`docker build -t reidjs/vue-vuex .`  
+`docker run -p 49162:3001 -d reidjs/vue-vuex`  
 
 # The Everything Stack
-The Everything Stack is a rube-goldberg-esque static website that runs on as many modern technologies as possible.\ In the spirit of https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition the goal is to perform _simple tasks_ in the most convoluted method possible. This is an art project and not intended for serious production uses. 
+The Everything Stack is a rube-goldberg-esque static website that runs on as many modern technologies as possible.  
+In the spirit of https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition the goal is to perform _simple tasks_ in the most convoluted method possible. This is an art project and not intended for serious production uses. 
 
 1. React w/ Next
 https://github.com/react-next-boilerplate/react-next-boilerplate
@@ -44,6 +47,10 @@ https://docker-curriculum.com/
 - A restful API (JAVA AND SPRING BOOT)
 
 # The front page
+### Short term goal:  
+Link the different containers in a *index* link page.
+
+### Long term goal:  
 At its core, visitors should be able to: 
 - Create an account
     - recaptcha to prevent spam
