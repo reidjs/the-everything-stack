@@ -14,7 +14,8 @@ services:
       - VIRTUAL_HOST=whoami.local
 
   react:
-    image: nginx-proxy_react
+    build: ../react-next
+    hostname: react
     environment:
       - VIRTUAL_HOST=react.local
       - VIRTUAL_PORT=3000
@@ -22,7 +23,8 @@ services:
       - "3000:3000"
 
   vue:
-    image: reidjs/vue-vuex
+    build: ../vue-vuex
+    hostname: vue
     environment:
       - VIRTUAL_HOST=vue.local
       - VIRTUAL_PORT=3001
