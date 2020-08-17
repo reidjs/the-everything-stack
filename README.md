@@ -1,4 +1,14 @@
 # Development
+Why I suspect it's not working:
+2020/08/17 07:17:06 [error] 4552#4552: *14 open() "/usr/share/nginx/html/service-worker.js" failed (2: No such file or directory), client: 135.180.41.128, server: yente.xyz, request: "GET /service-worker.js HTTP/1.1", host: "yente.xyz", referrer: "https://yente.xyz/service-worker.js"
+2020/08/17 07:22:36 [error] 4552#4552: *28 open() "/usr/share/nginx/html/service-worker.js" failed (2: No such file or directory), client: 135.180.41.128, server: yente.xyz, request: "GET /service-worker.js HTTP/1.1", host: "yente.xyz", referrer: "https://yente.xyz/service-worker.js"  
+
+/etc/nginx/sites-available/yente.xyz is hitting the wrong root (/usr/hsare/nginx/html)
+it should actually be hitting something in docker?
+https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04
+
+we can create a symbolic link between the Droplet’s filesystem and the container’s filesystem
+
 ### Running from docker-compose from nginx-proxy directory
 Anytime you change the code make sure to run  
 `docker-compose build`  
