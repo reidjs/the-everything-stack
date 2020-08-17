@@ -1,6 +1,11 @@
 # Development
-### Running from docker-compose in parent dir
+### Running from docker-compose from nginx-proxy directory
+Anytime you change the code make sure to run  
+`docker-compose build`  
+To start all the services run  
 `docker-compose up -d`
+To stop all the services run  
+`docker-compose down`
 
 ### Running individual Dockerfiles
 cd into react-next  
